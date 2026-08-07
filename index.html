@@ -33,8 +33,33 @@
     font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   main { max-width: 44rem; margin: 0 auto; }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+  header img { width: 88px; height: 88px; flex: none; }
   h1 { font-size: 1.9rem; margin: 0 0 .25rem; letter-spacing: -.02em; }
-  .tagline { color: var(--muted); margin: 0 0 2.5rem; font-size: 1.05rem; }
+  .tagline { color: var(--muted); margin: 0; font-size: 1.05rem; }
+  figure { margin: 0 0 2.5rem; }
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+  }
+  figcaption {
+    color: var(--muted);
+    font-size: .85rem;
+    text-align: center;
+    margin-top: .6rem;
+  }
+  @media (max-width: 32rem) {
+    header { flex-direction: column; align-items: flex-start; gap: .9rem; }
+    header img { width: 64px; height: 64px; }
+  }
   h2 { font-size: 1.05rem; margin: 2.5rem 0 .75rem; letter-spacing: .01em; }
   p { margin: 0 0 1rem; }
   a { color: var(--accent); }
@@ -66,8 +91,18 @@
 </head>
 <body>
 <main>
-  <h1>Edith</h1>
-  <p class="tagline">A GTK4 client for editing files that live on a remote server, over SFTP and FTP.</p>
+  <header>
+    <img src="icon.svg" alt="" width="88" height="88">
+    <div>
+      <h1>Edith</h1>
+      <p class="tagline">A GTK4 client for editing files that live on a remote server, over SFTP and FTP.</p>
+    </div>
+  </header>
+
+  <figure>
+    <img src="screenshot.png" alt="Edith browsing a remote server: a sidebar of saved connections beside a file listing." loading="lazy">
+    <figcaption>Browsing a remote server</figcaption>
+  </figure>
 
   <p>
     Edith is not on Flathub. This is its own Flatpak repository — add it once as

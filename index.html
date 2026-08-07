@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edith — Flatpak repository</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafafa;
+    --fg: #1c1c1c;
+    --muted: #5c5c5c;
+    --rule: #e0e0e0;
+    --code-bg: #f0f0ef;
+    --accent: #1c71d8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1f22;
+      --fg: #e8e6e3;
+      --muted: #9a9996;
+      --rule: #2f3538;
+      --code-bg: #24292b;
+      --accent: #78aeed;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 3rem 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; margin: 0 0 .25rem; letter-spacing: -.02em; }
+  .tagline { color: var(--muted); margin: 0 0 2.5rem; font-size: 1.05rem; }
+  h2 { font-size: 1.05rem; margin: 2.5rem 0 .75rem; letter-spacing: .01em; }
+  p { margin: 0 0 1rem; }
+  a { color: var(--accent); }
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: .9rem 1rem;
+    overflow-x: auto;
+    font-size: .875rem;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+  }
+  code { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; }
+  .note {
+    border-left: 3px solid var(--rule);
+    padding-left: 1rem;
+    color: var(--muted);
+    font-size: .925rem;
+  }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Edith</h1>
+  <p class="tagline">A GTK4 client for editing files that live on a remote server, over SFTP and FTP.</p>
+
+  <p>
+    Edith is not on Flathub. This is its own Flatpak repository — add it once as
+    a remote, and new versions arrive with <code>flatpak update</code> like any
+    other app.
+  </p>
+
+  <h2>Install</h2>
+<pre><code>flatpak remote-add --user edith https://mkay.github.io/edith-flatpak/edith.flatpakrepo
+flatpak install edith de.singular.edith</code></pre>
+
+  <h2>You also need Flathub</h2>
+  <p>
+    Only Edith itself is hosted here. The GNOME runtime it builds against comes
+    from Flathub, so that remote has to exist too:
+  </p>
+<pre><code>flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo</code></pre>
+
+  <h2>Signatures</h2>
+  <p>
+    Every commit and the repository summary are GPG-signed. The public key is
+    embedded in the <code>.flatpakrepo</code> file above, so <code>flatpak</code>
+    verifies each update against it — an unsigned or tampered object is refused.
+  </p>
+
+  <h2>What is actually served here</h2>
+  <p>
+    <code>repo/</code> is a static
+    <a href="https://ostreedev.github.io/ostree/">OSTree</a> repository in
+    <code>archive-z2</code> mode. Every file is stored once under the hash of its
+    contents, so successive releases share everything unchanged and a client
+    downloads only what it is missing.
+  </p>
+  <p class="note">
+    Debug symbols are not published — they roughly double the repository for
+    something no user of a binary remote consumes. Build from source if you need
+    them.
+  </p>
+
+  <footer>
+    <a href="https://github.com/mkay/edith">Source and issue tracker</a> ·
+    Published from <code>build-aux/flatpak/publish-repo.sh</code> ·
+    GPL-3.0-or-later
+  </footer>
+</main>
+</body>
+</html>

@@ -4,5 +4,5 @@ Url=https://mkay.github.io/edith-flatpak/repo/
 Homepage=https://github.com/mkay/edith
 Comment=Edit remote files over SFTP and FTP
 Description=A GTK4 client for editing files that live on a remote server.
-Icon=https://raw.githubusercontent.com/mkay/edith/main/data/icons/hicolor/scalable/apps/de.singular.edith.svg
+Icon=https://mkay.github.io/edith-flatpak/icon.svg
 GPGKey=mDMEanWyfhYJKwYBBAHaRw8BAQdAxwqxgfOuQzSeY+F+OqXNAZEFSXkeMXtHYcTQ7RTxrmS0KEVkaXRoIEZsYXRwYWsgU2lnbmluZyA8bWFpbEBzaW5ndWxhci5kZT6IlgQTFgoAPhYhBNP3BdWz9561D5BFj7pgkjkyHaPDBQJqdbJ+AhsDBQkJZgGABQsJCAcCBhUKCQgLAgQWAgMBAh4BAheAAAoJELpgkjkyHaPDqsgBAMpJzDsHiJKEi2Xe71/f254NHiKdfFd2ofjgIu67bPqsAP9JZL4e5iLaV84dEZKMMxiHhdmwQuZeJA1eMPJT0aRkDQ==

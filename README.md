@@ -6,8 +6,8 @@ remote server over SFTP and FTP.
 - Project page: <https://singular.de/apps/edith/>
 - Source and issues: <https://github.com/mkay/edith>
 
-Edith is not on Flathub, so this repo is how you install the Flatpak and keep it
-updated.
+Edith is not on Flathub: their policy doesn't allow AI-assisted apps, and Edith
+is. This repository is how you install the Flatpak and keep it updated instead.
 
 ## Install
 

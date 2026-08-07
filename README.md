@@ -1,7 +1,10 @@
 # Edith Flatpak repository
 
-A Flatpak remote for [Edith](https://github.com/mkay/edith), a GTK4 client for
-editing files that live on a remote server over SFTP and FTP.
+A Flatpak remote for Edith, a GTK4 client for editing files that live on a
+remote server over SFTP and FTP.
+
+- Project page: <https://singular.de/apps/edith/>
+- Source and issues: <https://github.com/mkay/edith>
 
 Edith is not on Flathub, so this repo is how you install the Flatpak and keep it
 updated.

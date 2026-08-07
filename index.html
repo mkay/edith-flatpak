@@ -42,6 +42,10 @@
   header img { width: 88px; height: 88px; flex: none; }
   h1 { font-size: 1.9rem; margin: 0 0 .25rem; letter-spacing: -.02em; }
   .tagline { color: var(--muted); margin: 0; font-size: 1.05rem; }
+  .links { margin: .7rem 0 0; font-size: .95rem; }
+  .links a { text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+  .links span { color: var(--rule); margin: 0 .55rem; }
   figure { margin: 0 0 2.5rem; }
   figure img {
     width: 100%;
@@ -96,6 +100,9 @@
     <div>
       <h1>Edith</h1>
       <p class="tagline">A GTK4 client for editing files that live on a remote server, over SFTP and FTP.</p>
+      <p class="links">
+        <a href="https://singular.de/apps/edith/">Project page</a><span>·</span><a href="https://github.com/mkay/edith">Source &amp; issues</a>
+      </p>
     </div>
   </header>
 
@@ -143,9 +150,10 @@ flatpak install edith de.singular.edith</code></pre>
   </p>
 
   <footer>
-    <a href="https://github.com/mkay/edith">Source and issue tracker</a> ·
-    Published from <code>build-aux/flatpak/publish-repo.sh</code> ·
-    GPL-3.0-or-later
+    <a href="https://singular.de/apps/edith/">singular.de/apps/edith</a> ·
+    <a href="https://github.com/mkay/edith">github.com/mkay/edith</a> ·
+    <a href="https://github.com/mkay/edith/issues">Report a bug</a><br>
+    Published from <code>build-aux/flatpak/publish-repo.sh</code> · GPL-3.0-or-later
   </footer>
 </main>
 </body>

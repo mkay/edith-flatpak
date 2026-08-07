@@ -107,8 +107,8 @@
   </header>
 
   <figure>
-    <img src="screenshot.png" alt="Edith browsing a remote server: a sidebar of saved connections beside a file listing." loading="lazy">
-    <figcaption>Browsing a remote server</figcaption>
+    <img src="screenshot-editor.png" alt="A remote file open in Edith's editor with syntax highlighting." loading="lazy">
+    <figcaption>Editing a remote file with syntax highlighting</figcaption>
   </figure>
 
   <p>
@@ -122,22 +122,22 @@
 <pre><code>flatpak remote-add --user edith https://mkay.github.io/edith-flatpak/edith.flatpakrepo
 flatpak install edith de.singular.edith</code></pre>
 
-  <figure>
-    <img src="screenshot-editor.png" alt="A remote file open in Edith's editor with syntax highlighting." loading="lazy">
-    <figcaption>Editing a remote file with syntax highlighting</figcaption>
-  </figure>
-
-  <figure>
-    <img src="screenshot-servers.png" alt="Edith's saved connections, organised into groups." loading="lazy">
-    <figcaption>Saved connections, grouped</figcaption>
-  </figure>
-
   <h2>You also need Flathub</h2>
   <p>
     Only Edith itself is hosted here. The GNOME runtime it builds against comes
     from Flathub, so that remote has to exist too:
   </p>
 <pre><code>flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo</code></pre>
+
+  <figure>
+    <img src="screenshot-servers.png" alt="Edith's saved connections, organised into groups." loading="lazy">
+    <figcaption>Saved connections, grouped</figcaption>
+  </figure>
+
+  <figure>
+    <img src="screenshot.png" alt="Edith browsing a remote server: a sidebar of saved connections beside a file listing." loading="lazy">
+    <figcaption>Browsing a remote server</figcaption>
+  </figure>
 
   <h2>Signatures</h2>
   <p>

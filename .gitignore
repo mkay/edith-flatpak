@@ -1,0 +1,7 @@
+# Local OSTree scratch state. None of it is served to clients — a Flatpak
+# remote needs only config, objects, refs, deltas, delta-indexes, extensions
+# and the summary files. These three are working state of whichever repo
+# happens to be local, and publish-repo.sh recreates them as needed.
+repo/uncompressed-objects-cache/
+repo/tmp/
+repo/state/
